@@ -11,6 +11,7 @@ public class personnage {
 			point_de_vie-=n;
 			if(point_de_vie<0) {
 				point_de_vie=0;
+				vivant=0;
 			}
 		} else {
 			point_de_vie=0;
@@ -18,15 +19,15 @@ public class personnage {
 		}	
 	}
 	void recevoir_soins(int n) {
-		if (vivant==1 &&  point_de_vie<1000) {
+		if(vivant==1 && point_de_vie<1000) {
 			point_de_vie+=n;
 			if(point_de_vie>=1000) {
 				point_de_vie=1000;
 			} 
-	        } else{
-				point_de_vie=0;
-				vivant=0;
-			}
+		}
+		if(vivant==0 || point_de_vie<=0) {
+			point_de_vie=0;
+		}
 	}
 	}
 	
