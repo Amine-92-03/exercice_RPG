@@ -6,7 +6,6 @@ public class personnage {
 				vivant_oupas.vivant=0;
 			}
 		} 
-		
 		void attaqué() {
 			if (point_vie.point_de_vie>0) {
 				point_vie.point_de_vie-=degat.dégat;
