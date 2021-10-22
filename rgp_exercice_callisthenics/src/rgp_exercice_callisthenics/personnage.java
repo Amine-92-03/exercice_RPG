@@ -1,27 +1,26 @@
 package rgp_exercice_callisthenics;
 public class personnage {
-	   initial_values val_init =new initial_values();
 		void verify_mort() {
-			if(initial_values.point_de_vie<=0 || initial_values.vivant==0) {
-				initial_values.point_de_vie=0;
-				initial_values.vivant=0;
+			if(point_vie.point_de_vie<=0 || vivant_oupas.vivant==0) {
+				point_vie.point_de_vie=0;
+				vivant_oupas.vivant=0;
 			}
 		} 
+		
 		void attaqué() {
-			if (initial_values.point_de_vie>0) {
-				initial_values.point_de_vie-=initial_values.dégat;
+			if (point_vie.point_de_vie>0) {
+				point_vie.point_de_vie-=degat.dégat;
 				verify_mort() ;
 		}
 		}
-		
 		void sur_dose() {
-			if(initial_values.point_de_vie>=1000) {
-				initial_values.point_de_vie=1000;
+			if(point_vie.point_de_vie>=1000) {
+				point_vie.point_de_vie=1000;
 			}
 		} 
 		void recevoir_soins() {
-			if(initial_values.vivant==1 && initial_values.point_de_vie<1000 && initial_values.point_de_vie>0 ) {
-			   initial_values.point_de_vie+=initial_values.soins;
+			if(vivant_oupas.vivant==1 && point_vie.point_de_vie<1000 && point_vie.point_de_vie>0 ) {
+			   point_vie.point_de_vie+=soin.soins;
 			   sur_dose();
 			}
 		}

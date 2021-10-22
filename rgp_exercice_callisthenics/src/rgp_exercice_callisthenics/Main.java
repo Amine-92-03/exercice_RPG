@@ -2,13 +2,13 @@ package rgp_exercice_callisthenics;
 public class Main {
 	public static void main(String[]  args) {
 		personnage personne =new personnage();
-	    initial_values.point_de_vie=1000;
-	    initial_values.dégat=80;
-	    initial_values.vivant=1;
-	    initial_values.soins=40;
+		point_vie.point_de_vie=1000;
+		degat.dégat=80;
+		vivant_oupas.vivant=1;
+	    soin.soins=10;
 		personne.attaqué();
-		System.out.println(initial_values.point_de_vie);
+		System.out.println(point_vie.point_de_vie);
 		personne.recevoir_soins();
-		System.out.println(initial_values.point_de_vie);
+		System.out.println(point_vie.point_de_vie);
 	}
 }
